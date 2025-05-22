@@ -1,0 +1,38 @@
+.navBar{
+    display: flex;
+    flex-direction: column;
+    
+    .link{
+        color: var(--font-secondaryColor);
+        text-decoration: none;
+
+        height: 50px;
+
+        padding: 6px;
+
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        border-top: 1px solid var(--bg-primaryColor);
+            
+        
+        &:last-child{
+            border-bottom: 1px solid var(--bg-primaryColor);;
+        }
+
+        &:hover{
+            background-color: var(--bg-hover);
+            transition: all .3s ease;
+        }
+
+        .checked{
+            background-color: var(--checkedColor);
+
+            border-radius: 18px;
+
+            width: 3px;
+            height: 100%;
+        }
+    }
+}

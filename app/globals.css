@@ -3,21 +3,26 @@
   --bg-secondaryColor: #2D2C2C;
 
   --font-primaryColor: #000000;
+  --font-secondaryColor: #FFFFFF;
   
   --font-nameType: "Aldrich";
   --font-iconParagraphType: "Poppins";
   --font-titleType: "Noto_Serif";
 
+  --bg-hover: rgba(225,225,225,0.4);
+
+  --checkedColor: #7087C3;
+
   --svg-color: #2D2C2C;
   --icon-color: #2D2C2C;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 html,
 body {
@@ -26,11 +31,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-iconParagraphType);
 }
 
 * {
@@ -40,8 +41,8 @@ body {
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */
