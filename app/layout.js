@@ -1,5 +1,23 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Aldrich, Poppins, Noto_Serif } from "next/font/google";
 import "./globals.css";
+
+export const aldrich = Aldrich({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-aldrich',
+});
+
+export const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-poppins',
+});
+
+export const notoSerif = Noto_Serif({
+  subsets: ['latin'],
+  weight: ['400', '700'], 
+  variable: '--font-noto-serif',
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
