@@ -10,12 +10,12 @@ export default function NavBar(){
     const pathName = usePathname();
 
     return <nav className={styles.navBar}>
-        <Link href="#" className={styles.link}> 
+        <Link href="/" className={styles.link}> 
         <div className={pathName === "/" ? styles.checked : null}/>
         <Image src="/icons/home.svg" width={25} height={25} alt="Home icon"/> Home
         </Link>
         
-        <Link href="#" className={styles.link}>
+        <Link href="/about" className={styles.link}>
         <div className={pathName === "/about" ? styles.checked : null}/>
         <Image src="/icons/about.svg" width={25} height={25} alt="About icon"/> Sobre
         </Link>
