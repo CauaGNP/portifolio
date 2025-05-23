@@ -25,7 +25,7 @@ export default function NavBar(){
         <Image src="/icons/luggage.svg" width={25} height={25} alt="Experence icon"/> Experiências
         </Link>
 
-        <Link href="#" className={styles.link}>
+        <Link href="/projects" className={styles.link}>
         <div className={pathName === "/projects" ? styles.checked : null}/>
         <Image src="/icons/projects.svg" width={25} height={25} alt="Proects icon"/> Projetos
         </Link>

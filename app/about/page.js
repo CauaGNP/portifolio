@@ -1,9 +1,22 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 
-import Header from "@/components/Header/Header"
+import Header from "@/components/Header/Header";
+import StacksDiv from "@/components/StacksDiv/StacksDiv";
+import Stacks from "@/components/Stacks/Stacks";
 
 export default function About(){
+    const FrontImageStyle = {
+        position : "relative",
+        bottom : "25%",
+        left : "5%"
+    }
+
+    const BackImageStyle = {
+        position : "relative",
+        right : "5%"
+    }
+
     return(
         <div className={styles.divContain}>
             <Header />
@@ -17,9 +30,60 @@ export default function About(){
                 </section>
                 
                 <section className={styles.stacksSection}>
-                    <h1>01-Front-end Software Skills</h1>
+                    <h1 className={styles.title}>01-Front-end Software Skills</h1>
                     <div className={styles.divStacks}>
+                    <StacksDiv>
+                        <Stacks stack="HTML">
+                            <Image src="/tec-icons/html.svg" width={80} height={90} alt="HTML Icon"/>
+                        </Stacks>
+                        <Stacks stack="CSS">
+                            <Image src="/tec-icons/css.svg" width={80} height={90} alt="CSS Icon"/>
+                        </Stacks>
+                        <Stacks stack="JavaScript">
+                            <Image src="/tec-icons/javascript.svg" width={80} height={90} alt="JavaScript Icon"/>
+                        </Stacks>
+                        <Stacks stack="React">
+                            <Image src="/tec-icons/react.svg" width={80} height={90} alt="React Icon"/>
+                        </Stacks>
+                        <Stacks stack="NextJs">
+                            <Image src="/tec-icons/nextjs.svg" width={80} height={90} alt="NextJs Icon"/>
+                        </Stacks>
+                        <Stacks stack="Git">
+                            <Image src="/tec-icons/git.svg" width={80} height={90} alt="Git Icon"/>
+                        </Stacks>
+                    </StacksDiv>
 
+                    <Image src="/assets/front-end.png" width={350} height={400} alt="Front-End Image" style={FrontImageStyle}/>
+                    </div>
+            
+                    <h1 className={styles.title}>02-Back-end Software Skills</h1>
+                    <div className={styles.divStacks}>
+                    <Image src="/assets/back-end.png" width={350} height={330} alt="Back-End Image" style={BackImageStyle} />
+
+                    <StacksDiv>
+                        <Stacks stack="Java">
+                            <Image src="/tec-icons/java.svg" width={80} height={90} alt="Java Icon"/>
+                        </Stacks>
+                        <Stacks stack="SpringBoot">
+                            <Image src="/tec-icons/springboot.svg" width={80} height={90} alt="SpringBoot Icon"/>
+                        </Stacks>
+                        <Stacks stack="Python">
+                            <Image src="/tec-icons/python.svg" width={80} height={90} alt="Python Icon"/>
+                        </Stacks>
+                        <Stacks stack="MySQL">
+                            <Image src="/tec-icons/mysql.svg" width={80} height={90} alt="MySQL Icon"/>
+                        </Stacks>
+                        <Stacks stack="NodeJs">
+                            <Image src="/tec-icons/nodejs.svg" width={80} height={90} alt="NodeJs Icon"/>
+                        </Stacks>
+                    </StacksDiv>
+                    </div>
+                </section>
+
+                <section className={styles.section}>
+                    <div className={styles.text}>
+                        <h1>Sobre mim</h1>  
+                        <p>Sou Cauã Gabriel, apaixonado por tecnologia e inovação. Desde que iniciei meus estudos em programação, venho explorando tanto o front-end quanto o back-end, sempre em busca de novos desafios e aprendizados. Atualmente, curso o 3° período de Sistemas para Internet na UNICAP.Tenho como características a curiosidade, proatividade e gosto por trabalhar em equipe. Além da programação, tenho interesse por design e música. Estou sempre buscando evoluir, seja participando de eventos, cursos ou desenvolvendo projetos próprios.</p>
                     </div>
                 </section>
             </main>

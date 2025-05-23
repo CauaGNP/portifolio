@@ -9,6 +9,8 @@
 
     transition: all .3s ease;
 
+    position: fixed;
+
     .button{
         background-color: transparent;
 
