@@ -20,7 +20,7 @@ export default function NavBar(){
         <Image src="/icons/about.svg" width={25} height={25} alt="About icon"/> Sobre
         </Link>
 
-        <Link href="#" className={styles.link}>
+        <Link href="/experience" className={styles.link}>
         <div className={pathName === "/experence" ? styles.checked : null}/>
         <Image src="/icons/luggage.svg" width={25} height={25} alt="Experence icon"/> Experiências
         </Link>
@@ -30,7 +30,7 @@ export default function NavBar(){
         <Image src="/icons/projects.svg" width={25} height={25} alt="Proects icon"/> Projetos
         </Link>
 
-        <Link href="#" className={styles.link}>
+        <Link href="/repository" className={styles.link}>
         <div className={pathName === "/repository" ? styles.checked : null}/>
         <Image src="/icons/github.svg" width={25} height={25} alt="GitHub icon"/> Repositório
         </Link>

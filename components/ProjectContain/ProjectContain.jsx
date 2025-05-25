@@ -1,6 +1,8 @@
+import styles from "./projectContain.module.css";
+
 export default function ProjectContain({children}){
     return(
-        <div>
+        <div className={styles.contain}>
             {children}
         </div>
     )
