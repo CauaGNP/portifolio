@@ -5,35 +5,100 @@
   .main{
     padding: 40px;
 
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 64px;
+
+    .title{
+      margin-top: 24px;
+  
+      text-align: center;
+    }
     
-    .divPassword{
+    .passwordSection{
+      min-height: 370px;
+
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      justify-content: end;
 
-      .correctPosition{
-        background-color: green;
-      }
+      .divPassword{
+        margin: 8px;
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
 
-      .incorretPosition{
-        background-color: orange;
-      }
+        p{
+          font-family: var(--font-StacksType);
+          color: var(--font-secondaryColor);
+          text-shadow: -1px 2px 0 #000, 1px 2px 0 #000;
 
-      .extingueDaFaceDaTerra{
-        background-color: red;
+          border: 1px solid var(--bg-secondaryColor);
+          border-radius: 8px;
+
+          height: 40px;
+          width: 40px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .correctPosition{
+          background-color: rgb(1, 182, 1);
+        }
+
+        .incorretPosition{
+          background-color: orange;
+        }
+
+        .extingueDaFaceDaTerra{
+          background-color: red;
+        }
       }
     }
 
     .sectionInput{
+      margin-bottom: 16px;
+
       display: flex;
       flex-direction: column;
+      gap: 16px;
       
-      .buttons{
-      display: flex;
-      flex-direction: row;
+      .divButtons{
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+
+        button{
+          font-family: var(--font-iconParagraphType);
+
+          border: 1px solid var(--bg-secondaryColor);
+          border-radius: 6px;
+
+          padding: 8px 16px;
+
+          cursor: pointer;
+          transition:all .3s ease;
+
+          &:hover{
+            background-color: var(--bg-secondaryColor);
+            color: var(--font-secondaryColor);
+          }
+
+          &:disabled{
+            background-color: var(--bg-secondaryHover);
+          }
+
+          &:disabled:hover{
+            color: var(--font-primaryColor);
+          }
+        }
       }
     }
   }

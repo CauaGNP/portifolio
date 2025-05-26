@@ -15,8 +15,8 @@ export default function Game(){
     const [point, setPoint] = useState(0)
     const [gameStarted, setGameStarted] = useState(true);
 
-    function numbersGenerate(array){
-        const copyPassword = [...array];
+    function numbersGenerate(){
+        const copyPassword = [];
 
         while(copyPassword.length < 5){
             const randomNumber = Math.floor(Math.random() * 10).toString();
@@ -24,8 +24,6 @@ export default function Game(){
                 copyPassword.push(randomNumber);
             } 
         }
-
-        console.log(copyPassword)
 
         setPassword(copyPassword);
         setGameStarted(false);
@@ -36,6 +34,7 @@ export default function Game(){
 
     function displayNumber(){
         alert(`A senha é ${password}`);
+
         setGameStarted(true);
         setPassword([]);
         setUserPassword([]);
@@ -65,8 +64,7 @@ export default function Game(){
         if(digit === password[index]){
             points++;
         }
-    });
-        console.log(points)
+        });
         setPoint(points)
     }
 
@@ -76,24 +74,27 @@ export default function Game(){
             <main className={styles.main}>
                 <section className={styles.section}>
 
-                    {point === 5 ? <h1>Você Ganhou</h1> : chances === 10 ? <h1>Voce perdeu</h1> : null}
+                    {point === 5 ? <h1 className={styles.title}>Você Ganhou</h1> : chances === 10 ? <h1 className={styles.title}>Voce perdeu</h1> : null}
                     
-                    {userPassword.map((passwordDisplay,i) => (
-                        <div key={`${i}Password`} className={styles.divPassword}>
+                    <section className={styles.passwordSection}>
 
-                            {passwordDisplay.map((digit, index) => (
-                                <p key={`${index}IndexValue`}
-                                className={compareNumbers(digit, index)}
-                                >{digit}</p>
-                            ))}
+                        {userPassword.map((passwordDisplay,i) => (
+                            <div key={`${i}Password`} className={styles.divPassword}>
 
-                        </div> 
-                    )) }
+                                {passwordDisplay.map((digit, index) => (
+                                    <p key={`${index}IndexValue`}
+                                    className={compareNumbers(digit, index)}
+                                    >{digit}</p>
+                                ))}
+
+                            </div> 
+                        )) }
+                    </section>
 
                     <section className={styles.sectionInput}>
-                        <input type="number" min="0" max="9"  onChange={(e) =>{setInputValue(e.target.value)}} className={styles.input}/>
+                        <input type="number" min="0" max="9" onChange={(e) =>{setInputValue(e.target.value)}} className={styles.input}/>
                         
-                        <div className={styles.buttons}>
+                        <div className={styles.divButtons}>
                             <button 
                             onClick={() => {inputValue.length === 5 ? sendPassword(inputValue) : alert("Você deve inserir 5 números para gerar uma tentativa!!")
                             setChaces(chances + 1);
@@ -103,19 +104,17 @@ export default function Game(){
 
                             <button 
                             onClick={() => {
-                            numbersGenerate(password) 
+                            numbersGenerate() 
                             setGameStarted(false)}}
                             >Gerar Senha</button>
 
                             <button 
                             onClick={() => {displayNumber()}} 
-                            disabled={gameStarted}
+                            disabled={gameStarted || chances === 10 || point === 5}
                             >Mostrar Senha</button>
                         </div>
                     </section>
 
-
-                
                 </section>
             </main>
         </div>
