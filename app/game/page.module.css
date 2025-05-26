@@ -10,18 +10,31 @@
     align-items: center;
     gap: 64px;
     
-    .correctPosition{
-      background-color: green;
+    .divPassword{
+      display: flex;
+      flex-direction: row;
+
+      .correctPosition{
+        background-color: green;
+      }
+
+      .incorretPosition{
+        background-color: orange;
+      }
+
+      .extingueDaFaceDaTerra{
+        background-color: red;
+      }
     }
 
-    .incorretPosition{
-      background-color: orange;
+    .sectionInput{
+      display: flex;
+      flex-direction: column;
+      
+      .buttons{
+      display: flex;
+      flex-direction: row;
+      }
     }
-
-    .extingueDaFaceDaTerra{
-      background-color: red;
-    }
-
-
   }
 }
