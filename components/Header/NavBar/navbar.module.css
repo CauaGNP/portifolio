@@ -34,5 +34,12 @@
             width: 3px;
             height: 100%;
         }
+
+        .noChecked{
+            width: 3px;
+            height: 100%;
+
+            opacity: 0.9;
+        }
     }
 }

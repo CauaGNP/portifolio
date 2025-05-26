@@ -3,41 +3,36 @@
 import styles from "./navbar.module.css";
 import Link from "next/link";
 import Image from "next/image";
-
 import { usePathname } from "next/navigation";
+import { BackpackIcon, Code2, Gamepad2, HomeIcon, InfoIcon } from "lucide-react";
 
 export default function NavBar(){
     const pathName = usePathname();
 
     return <nav className={styles.navBar}>
         <Link href="/" className={styles.link}> 
-        <div className={pathName === "/" ? styles.checked : null}/>
-        <Image src="/icons/home.svg" width={25} height={25} alt="Home icon"/> Home
+        <div className={pathName === "/" ? styles.checked : styles.noChecked}/>
+        <HomeIcon size={25}/> Home
         </Link>
         
         <Link href="/about" className={styles.link}>
-        <div className={pathName === "/about" ? styles.checked : null}/>
-        <Image src="/icons/about.svg" width={25} height={25} alt="About icon"/> Sobre
+        <div className={pathName === "/about" ? styles.checked : styles.noChecked}/>
+        <InfoIcon/>Sobre
         </Link>
 
         <Link href="/experience" className={styles.link}>
-        <div className={pathName === "/experence" ? styles.checked : null}/>
-        <Image src="/icons/luggage.svg" width={25} height={25} alt="Experence icon"/> Experiências
+        <div className={pathName === "/experience" ? styles.checked : styles.noChecked}/>
+        <BackpackIcon size={28}  strokeWidth={1.5}/> Experiência
         </Link>
 
         <Link href="/projects" className={styles.link}>
-        <div className={pathName === "/projects" ? styles.checked : null}/>
-        <Image src="/icons/projects.svg" width={25} height={25} alt="Proects icon"/> Projetos
+        <div className={pathName === "/projects" ? styles.checked : styles.noChecked}/>
+        <Code2  size={25}/> Projetos
         </Link>
 
-        <Link href="/repository" className={styles.link}>
-        <div className={pathName === "/repository" ? styles.checked : null}/>
-        <Image src="/icons/github.svg" width={25} height={25} alt="GitHub icon"/> Repositório
-        </Link>
-
-        <Link href="#" className={styles.link}>
-        <div className={pathName === "/game" ? styles.checked : null}/>
-        <Image src="/icons/game-controller.svg" width={25} height={25} alt="Control icon"/> Jogo
+        <Link href="/game" className={styles.link}>
+        <div className={pathName === "/game" ? styles.checked : styles.noChecked}/>
+        <Gamepad2 size={28}/> Jogo
         </Link>
     </nav>
 }

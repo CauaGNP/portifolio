@@ -1,0 +1,23 @@
+.divContain{
+  height: 100vh;
+  width: 100vw;
+
+  .main{
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    
+    .certo{
+      background-color: green;
+    }
+
+    .errado{
+      background-color: red;
+    }
+
+
+  }
+}

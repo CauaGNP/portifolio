@@ -1,3 +1,14 @@
 .contain{
     margin-bottom: 32px;
+
+    width: 120%;
+
+    transition: all .3s ease;
+
+    &:hover{
+        background-color: var(--bg-secondaryHover);
+        border-radius: 16px;
+
+        padding: 8px 16px;
+    }
 }
