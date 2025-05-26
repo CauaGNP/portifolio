@@ -9,7 +9,6 @@ export default function Game(){
     
     const [inputValue, setInputValue] = useState();
     const [chances, setChaces] = useState(0);
-    const [checkNumbers, setCheckNumbers] = useState()
     const [password, setPassword] = useState([]);
     const [userPassword, setUserPassword] = useState([]);
 
@@ -17,7 +16,7 @@ export default function Game(){
         const copyPassWord = [...password]
         for(let i = 0; i < 5; i++){
             const randomNumber = Math.floor(Math.random() * 10 );
-
+            
             copyPassWord[i] = randomNumber.toString();
         }
         setPassword(copyPassWord);
@@ -30,40 +29,33 @@ export default function Game(){
     }
 
     function sendPassword(numbersInputValue){   
-        const copyUserPassword = [...userPassword];
-        copyUserPassword.push(numbersInputValue.toString().split(""));
-
-        setUserPassword(copyUserPassword);
+        setUserPassword([...userPassword, numbersInputValue.toString().split("")]);
     }
 
-    // function compareNumbers(value){
-    //     password.map((aaa) => {
-    //         if(value === aaa){
-    //             return (
-    //                 <p className={styles.correto}>{value}</p>
-    //             )
-    //         }else if(password.some((digit) => digit === value)){
-    //             return (
-    //                 <p className={styles.lugarIncorreto}>{value}</p>
-    //             )
-    //         }else{
-    //             return (
-    //                 <p className={styles.correto}>{value}</p>
-    //             )
-    //         }
-    //     })
-    // }
+    function compareNumbers(value, index){
+        if(value === password[index]){
+            return styles.correctPosition;
+        }
+        if(password.some(caracter => value === caracter)){
+            return styles.incorretPosition;
+        }
+        return styles.extingueDaFaceDaTerra;
+    }
 
     return(
         <div className={styles.divContain}>
             <Header />
             <main className={styles.main}>
                 <section className={styles.section}>
+                    
                     {userPassword.map((passwordDisplay,i) => (
                         <div key={`${i}Password`} >
+
                             {passwordDisplay.map((digit, index) => (
-                                <p key={`${index}IndexValue`}>{digit}</p>
+                                <p key={`${index}IndexValue`}
+                                className={compareNumbers(digit, index)}>{digit}</p>
                             ))}
+
                         </div> 
                     )) }
                     

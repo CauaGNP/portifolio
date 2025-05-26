@@ -10,11 +10,15 @@
     align-items: center;
     gap: 64px;
     
-    .certo{
+    .correctPosition{
       background-color: green;
     }
 
-    .errado{
+    .incorretPosition{
+      background-color: orange;
+    }
+
+    .extingueDaFaceDaTerra{
       background-color: red;
     }
 
