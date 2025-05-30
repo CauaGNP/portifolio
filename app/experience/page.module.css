@@ -1,4 +1,27 @@
 .divContain{
   height: 100vh;
   width: 100vw;
+
+   .main{
+      padding: 40px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 64px; 
+
+      .section{
+        width: 60%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .title{
+          font-family: var(--font-nameType);
+          font-size: 2rem;
+        }
+      }
+   }
+
 }

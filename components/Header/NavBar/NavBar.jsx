@@ -2,7 +2,6 @@
 
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { BackpackIcon, Code2, Gamepad2, HomeIcon, InfoIcon } from "lucide-react";
 

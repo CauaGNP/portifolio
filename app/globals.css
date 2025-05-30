@@ -7,12 +7,11 @@
   
   --font-nameType: "Aldrich";
   --font-iconParagraphType: "Poppins";
-  --font-titleType: "Noto_Serif";
   --font-StacksType: "Quantico";
 
   --bg-hover: rgba(225,225,225,0.4);
   --bg-secondaryHover: rgba(161, 161, 161, 0.4);
-
+  --bg-linkImageHover: #7088c39f;
 
   --checkedColor: #7087C3;
 

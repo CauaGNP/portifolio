@@ -1,0 +1,48 @@
+.divContainC{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.divContainR{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.title{
+    font-family: var(--font-nameType);
+    margin-bottom: 16px;
+}
+
+.linkDiv{
+    position: relative;
+    width: 100%;
+
+    .clickAccess {
+        background-color: var(--bg-linkImageHover);
+        color: var(--font-primaryColor);
+        font-weight: 500;
+        text-decoration: none;
+
+        width: 200px;
+
+
+        padding: 8px 16px;
+        border-radius: 8px;
+
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover .clickAccess {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}

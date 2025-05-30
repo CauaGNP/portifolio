@@ -1,0 +1,11 @@
+.divContain{
+    margin-bottom: 24px;
+
+    .subTitle{
+        font-family: var(--font-nameType);
+    }
+
+    .image{
+        width: 50%;
+    }
+}

@@ -12,7 +12,7 @@
 
     .title{
       font-size: 40px;
-      font-family: var(--font-titleType);
+      font-family: var(--font-nameType);
       
       margin-bottom: 40px;
     }
@@ -24,9 +24,8 @@
         border-radius: 24px;
         height: auto;
       }
-    }
-
       .sectionProjects{
+        width: 120%;
 
         .title{
           margin-bottom: 8px;
@@ -37,6 +36,8 @@
         }
     
       .divRepos{
+        width: 100%;
+
         margin-bottom: 12px;
 
         display: flex;
@@ -46,7 +47,7 @@
 
         h1{
           font-size: 27px;
-          font-family: var(--font-titleType);
+          font-family: var(--font-nameType);
         }
 
         &:hover{
@@ -60,8 +61,16 @@
           align-items: center;
           transform: scale(1.02);
         }
+
+        .link{
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
-
+    }
   }
 }
