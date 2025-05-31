@@ -74,3 +74,19 @@
     }
   }
 }
+
+@media screen and (max-width:600px){
+  .projectImage{
+    width: 100%;
+
+    border-radius: 3px;
+  }
+
+  .divRepos{
+    &:hover{
+      height: auto;
+      padding: 0;
+      transform: scale(0);
+    }
+  }
+}

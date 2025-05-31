@@ -47,3 +47,27 @@
 
     transition: all .3s ease;
 }
+
+@media screen and (max-width: 600px){
+    .header{
+        width: 40%;
+    }
+
+    .active{
+        width: 15%;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:900px){
+    .header{
+        width: 22%;
+    }
+
+    .active{
+        font-size: 0;
+
+        width: 10%;
+
+        transition: all .3s ease;
+    }
+}

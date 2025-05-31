@@ -26,7 +26,7 @@ export default function About(){
                         <h1>Um breve resumo</h1>  
                         <p>Olá! Me chamo Cauã Gabriel, tenho 2 anos de experiência em programação e atualmente curso o 3° período de Sistemas para Internet na UNICAP. Tenho foco em desenvolvimento front-end, mas também estou expandindo meus conhecimentos em tecnologias back-end.</p>
                     </div>
-                    <Image src="/assets/astronaut.png" width={150} height={180} alt="astronaut Image"/>
+                    <img src="/assets/astronaut.png" width={150} height={180} alt="astronaut Image" className={styles.img}/>
                 </section>
                 
                 <section className={styles.stacksSection}>
@@ -53,12 +53,12 @@ export default function About(){
                         </Stacks>
                     </StacksDiv>
 
-                    <Image src="/assets/front-end.png" width={350} height={400} alt="Front-End Image" style={FrontImageStyle}/>
+                    <img src="/assets/front-end.png" width={350} height={400} alt="Front-End Image" style={FrontImageStyle} className={styles.imageStacks}/>
                     </div>
             
                     <h1 className={styles.title}>02-Back-end Software Skills</h1>
                     <div className={styles.divStacks}>
-                    <Image src="/assets/back-end.png" width={350} height={330} alt="Back-End Image" style={BackImageStyle} />
+                    <img src="/assets/back-end.png" width={350} height={330} alt="Back-End Image" style={BackImageStyle} className={styles.imageStacks}/>
 
                     <StacksDiv>
                         <Stacks stack="Java">
